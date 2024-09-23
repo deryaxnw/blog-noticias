@@ -38,7 +38,7 @@ nav {
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 1rem;
+    padding: 2rem 1rem;
    
 }
 
@@ -103,8 +103,19 @@ main {
     flex-direction: column;
     gap: 25px;
     padding: 1rem 2rem;
-    
-}
+    }
+
+    .menu-responsivo {
+        font-size: 3rem;
+        display: none;
+        
+    }
+
+
+
+
+
+
 .main-artic {
     display: flex;
     border-radius: 10px;
@@ -130,7 +141,7 @@ main {
 
 
 .foto {
-    width: 20rem;
+    width: 25rem;
     height: 80%;
     margin-left: 1rem;
     margin-top: auto;
@@ -167,7 +178,7 @@ main {
 
 .bu button {
    
-    width: 5rem;
+    width: 5.5rem;
     border: none;
     border-radius: 10px;
     background-color: #ebb01d;
@@ -199,4 +210,98 @@ footer{
 footer h2 {
     color: white;
 }
+
+/* XS extra small - smartphone portrait (retrato) */
+/* 576px */
+@media (max-width: 36rem)  {
+        nav {
+            padding: 1rem 1rem;
+
+        }
+        .menu {
+            display: none;
+        }
+        .menu-responsivo {
+            font-size: 3rem;
+            display: block;
+        }
+
+        /* .main-artic {
+            margin: 0 2rem  1rem;
+            grid-template-columns: auto;
+            grid-template-columns: auto;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+
+        .foto {
+            overflow: visible;
+            margin-right: 0;
+        }
+
+        .foto img {
+            width: 100%;
+        } */
+
+}   
+
+
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    /* nav {
+        padding: 0.1rem;
+    } */
+    
+    .main-artic {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .foto {
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    .texto {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* nav {
+        flex-direction: column;
+        align-items: flex-start;
+    } */
+
+    .main-artic {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .texto {
+        width: 100%;
+    }
+}
+
+@media (max-width: 490px) {
+    .bu button {
+        width: 100%;
+    }
+
+    /* .menu a {
+        padding: 0.5rem;
+    } */
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer h2 {
+        font-size: 1.2rem;
+    }
+}
+
+/* tablet */
 
