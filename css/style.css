@@ -83,6 +83,55 @@ div ul {
     transition: 0.5s;
 }
 
+.menu-responsivo {
+    font-size: 4rem;
+    display: none;
+    position: relative;
+    /* cursor: pointer; */
+}
+
+.menu-responsivo input {
+    display: none;
+}
+
+.menu-button {
+    cursor: pointer;
+}
+
+
+
+
+.menu-content{
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.514);
+    display: none;
+    position: absolute;  
+    top: 70px;
+    right: 0;
+    z-index: 10;
+    text-align: center;
+}
+
+.menu-content a {
+    border-radius: 10px;
+    color: var(--cor-letra);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.3rem;
+    display: block;
+}
+
+.menu-content a:hover{
+    background-color: #ebd9d9c7;
+    color: #c90c5b;
+    transition: 0.5s;
+}
+
+    #menu-toggle:checked + .menu-button + .menu-content {
+        display: block;
+    }
+
+
 
 main {
     
@@ -105,13 +154,7 @@ main {
     padding: 1rem 2rem;
     }
 
-    .menu-responsivo {
-        font-size: 3rem;
-        display: none;
-        
-    }
-
-
+   
 
 
 
@@ -215,9 +258,17 @@ footer h2 {
 /* 576px */
 @media (max-width: 36rem)  {
         nav {
-            padding: 1rem 1rem;
+            padding: 1rem 3rem;
 
         }
+
+        .nav2 {
+            padding: 3rem 2rem;
+
+        }
+
+
+
         .menu {
             display: none;
         }
@@ -253,7 +304,6 @@ footer h2 {
     /* nav {
         padding: 0.1rem;
     } */
-    
     .main-artic {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -265,10 +315,15 @@ footer h2 {
 
     .texto {
         width: 90%;
+        height: 100%;
+    }
+
+    .bu {
+        margin-bottom: 20rem;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 708px) {
     /* nav {
         flex-direction: column;
         align-items: flex-start;
@@ -281,13 +336,18 @@ footer h2 {
     }
 
     .texto {
+        
         width: 100%;
     }
 }
 
-@media (max-width: 490px) {
+@media (max-width: 30rem) {
     .bu button {
         width: 100%;
+    }
+
+    .menu-content {
+        right: -2rem;
     }
 
     /* .menu a {
